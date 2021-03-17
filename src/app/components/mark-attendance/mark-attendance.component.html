@@ -1,0 +1,24 @@
+<nz-form-label [nzNoColon]="true">Selected Meeting</nz-form-label>
+<nz-select [(ngModel)]="selectedMeeting[0].id" disabled>
+    <nz-option *ngFor="let item of meetingList" [nzLabel]="item.meetingTitle" [nzValue]="item.id"></nz-option>
+</nz-select>
+<ng-template #tagPlaceHolder let-selectedList> and {{ selectedList.length }} more selected </ng-template>
+<nz-form-label [nzNoColon]="true">Meeting Date: {{selectedMeeting[0].meetingDate | date:'dd/MM/yy'}}</nz-form-label>
+<br/>
+<br/>
+<nz-table #rowSelectionTable nzShowPagination [nzData]="userList"
+    (nzCurrentPageDataChange)="onCurrentPageDataChange($event)">
+    <thead>
+        <tr>
+            <th [nzChecked]="checked" [nzIndeterminate]="indeterminate" (nzCheckedChange)="onAllChecked($event)" [nzDisabled]="mode === 'view'"></th>
+            <th>Name Of Members</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of rowSelectionTable.data">
+            <td [nzChecked]="setOfCheckedId.has(data.id)" [nzDisabled]="mode === 'view'"
+                (nzCheckedChange)="onItemChecked(data.id, $event)"></td>
+            <td>{{ data.userName}}</td>
+        </tr>
+    </tbody>
+</nz-table>

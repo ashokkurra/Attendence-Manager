@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "admin",
+      "password": "password"
+    },
+    {
+      "id": 2,
+      "userName": "ceo",
+      "password": "password"
+    },
+    {
+      "id": 3,
+      "userName": "chairman",
+      "password": "password"
+    },
+    {
+      "id": 4,
+      "userName": "user",
+      "password": "password"
+    }
+  ],
+  "meetings": []
+}

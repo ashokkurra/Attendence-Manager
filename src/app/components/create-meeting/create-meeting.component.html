@@ -1,0 +1,16 @@
+<form nz-form [formGroup]="createMeetingForm" class="meeting-form" (ngSubmit)="submitForm()">
+    <nz-form-item>
+        <nz-form-control nzErrorTip="Please select meeting date">
+            <nz-input-group>
+                <nz-date-picker formControlName="meetingDate" nzPlaceHolder="Meeting Date"></nz-date-picker>
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control nzErrorTip="Please input meeting title">
+            <nz-input-group>
+                <input type="text" nz-input formControlName="meetingTitle" placeholder="Meeting Title" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+</form>

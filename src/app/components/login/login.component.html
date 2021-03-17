@@ -1,0 +1,32 @@
+<nz-layout>
+  <nz-content class="login-container">
+    <form nz-form [formGroup]="loginForm" class="login-form" (ngSubmit)="submitForm()">
+      <h3 nz-typography>Login</h3>
+      <nz-form-label [nzNoColon]="true" nzFor="userName">Username</nz-form-label>
+      <nz-form-item>        
+        <nz-form-control nzErrorTip="Please input your username!">
+          <nz-input-group>
+            <input type="text" nz-input formControlName="userName" placeholder="Your Username" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-label [nzNoColon]="true" nzFor="password">Password</nz-form-label>
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your Password!">
+          <nz-input-group>
+            <input type="password" nz-input formControlName="password" placeholder="Your Password" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <div nz-row class="login-form-margin">
+        <div nz-col [nzSpan]="8">
+          <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'"><i nz-icon nzType="login" nzTheme="outline"></i>Log in</button>
+        </div>
+        <div nz-col [nzSpan]="4"></div>
+        <div nz-col [nzSpan]="12">
+          <a class="login-form-forgot">Forgot password?</a>
+        </div>
+      </div>
+    </form>
+  </nz-content>
+</nz-layout>

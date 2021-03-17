@@ -1,0 +1,46 @@
+nz-content {
+  padding: 0 50px;
+}
+
+.login-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #e7f0f9;
+  .login-form {
+    background-color: #dce9f6;
+    padding: 3em 6em;
+    border-radius: 8px;
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 1px 8px 3px #becede inset;
+  }
+  .ant-form-item-label {
+    text-align: left;
+  }
+  .ant-btn-primary {
+    color: #607d8b;
+    background: #dce9f6;
+    border-color: #dce9f6;
+    border-radius: 8px;
+    box-shadow: 1px 1px 8px #bfcddc;
+  }
+}
+
+.login-form-margin {
+  margin-bottom: 16px;
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+.login-form-button {
+  width: 100%;
+}
